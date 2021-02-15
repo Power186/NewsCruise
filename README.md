@@ -6,6 +6,8 @@ iOS App: News Cruise - get the top 20 news articles in the U.S. from newsapi.org
 
 * Additionally, the error handling shows how networking in SwiftUI using URLSession can fail gracefully with UIKit integration.. thus providing an exceptional user experience.
 
+![gif](demo.gif)
+
 ## Built with:
 * Swift
 * SwiftUI
