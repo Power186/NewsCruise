@@ -36,7 +36,7 @@ struct ArticleView: View {
                     Text(article.title ?? "No title")
                         .font(.subheadline)
                         .bold()
-                        .foregroundColor(.gray)
+                        .foregroundColor(.primary)
                         .lineLimit(2)
                 }
                 .padding(.leading, 8)
@@ -54,6 +54,7 @@ struct ArticleView: View {
                 .resizable()
                 .frame(width: 70, height: 60)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
+                .shadow(color: .green, radius: 2)
             
 //            if image == nil {
 //                Image(systemName: "photo")

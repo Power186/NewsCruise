@@ -16,20 +16,21 @@ struct NewsView: View {
     var body: some View {
         NavigationView {
             VStack {
-                configureNewsView
-            }
-            .listStyle(SidebarListStyle())
-            .navigationBarTitle("News")
-            .navigationBarItems(trailing: Button(action: {
-                getNewsPressed = true
-                newsVM.fetchArticles()
-            }) {
-                Text("Get News")
-        })
-            Text("\(newsVM.articles.count) articles")
-                .font(.headline)
-                .foregroundColor(.secondary)
+                    configureNewsView
+    //                Text("\(newsVM.articles.count) articles")
+    //                    .font(.headline)
+    //                    .foregroundColor(.secondary)
+                }
+    //            .listStyle(SidebarListStyle())
+                .navigationBarTitle("News")
+                .navigationBarItems(trailing: Button(action: {
+                    getNewsPressed.toggle()
+                    newsVM.fetchArticles()
+                }) {
+                    configureNewsButtonText
+            })
         }
+            
     }
     
     var configureNewsView: some View {
@@ -43,6 +44,16 @@ struct NewsView: View {
                     }
                 }
                 .animation(.easeIn)
+            }
+        }
+    }
+    
+    var configureNewsButtonText: some View {
+        Group {
+            if getNewsPressed == false {
+                Text("Get News")
+            } else {
+                Text("Refresh News")
             }
         }
     }
