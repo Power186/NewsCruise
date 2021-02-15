@@ -1,5 +1,5 @@
 # MVC-MVVM-UIKit_SwiftUI
-iOS App: News Cruise - get the top 20 news articles in the U.S. from newsapi.org. View, refresh, and share articles across apps.
+iOS App: News Cruise 
 
 ## Note:
 * Code comments are MVC and the code in production is MVVM. This is to show how to refactor from UIKit MVC thinking to a SwiftUI MVVM thinking architecture with a hybrid of SOLID principles.
